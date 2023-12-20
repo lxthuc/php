@@ -5,5 +5,3 @@ define("DB_PASS", '');
 define("DB_NAME", 'fashion_store');
 ?>
 
-
-<!-- update -->

@@ -13,7 +13,7 @@ body {
 
 nav {
   top: 0;
-  background: whitesmoke;
+  background: #515154;
   height: 80px;
   width: 100%;
   position: fixed;
@@ -62,7 +62,7 @@ a:hover {
 
 .featuredProducts{
   text-align: center;
-  background-color: #0082e6;
+  background-color: #515154;
   color: white;
 }
 

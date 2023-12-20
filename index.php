@@ -18,14 +18,14 @@ $list = mysqli_fetch_all($product->getFeaturedProducts(), MYSQLI_ASSOC);
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="public/css/style.css">
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
+    
     <title>Trang chủ</title>
 </head>
 
 <body>
     <nav>
         <a class="logo" href="index.php">
-            <img src="public/images/logo.png" alt="">
+            <img style="height: 57px" src="public/images/logo2.png" alt="">
         </a>
         <ul>
             <li><a href="index.php" class="active">Trang chủ</a></li>

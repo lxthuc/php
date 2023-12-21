@@ -31,6 +31,7 @@ $completeOrderList = $order->getCompleteOrder();
 </head>
 
 <body>
+   <div class = "container">
     <nav>
         <input type="checkbox" id="check">
         <label for="check" class="checkbtn">
@@ -46,7 +47,7 @@ $completeOrderList = $order->getCompleteOrder();
     <div class="title">
         <h1>Danh sách đơn đặt hàng</h1>
     </div>
-    <div class="container">
+    <div class="add">
         <!-- Tab links -->
         <div class="tab">
             <button class="tablinks" onclick="openTab(event, 'Processing')">Đang xử lý</button>

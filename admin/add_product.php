@@ -33,6 +33,7 @@ $categoriesList = $category->getAll();
 </head>
 
 <body>
+    <div class = "container">
     <nav>
         <input type="checkbox" id="check">
         <label for="check" class="checkbtn">
@@ -48,7 +49,7 @@ $categoriesList = $category->getAll();
     <div class="title">
         <h1>Thêm mới sản phẩm</h1>
     </div>
-    <div class="container">
+    <div class="add">
         <p style="color: green;"><?= !empty($result) ? $result : '' ?></p>
         <div class="form-add">
             <form action="add_product.php" method="post" enctype="multipart/form-data">

@@ -51,6 +51,7 @@ $pageCount = $categories->getCountPaging();
 </head>
 
 <body>
+       <div class = "container">
     <nav>
         <input type="checkbox" id="check">
         <label for="check" class="checkbtn">
@@ -69,7 +70,7 @@ $pageCount = $categories->getCountPaging();
     <div class="addNew">
         <a href="add_category.php">Thêm mới</a>
     </div>
-    <div class="container">
+    <div class="add">
         <?php $count = 1;
         if ($list) { ?>
             <table class="list">

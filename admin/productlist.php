@@ -4,7 +4,6 @@ include '../classes/product.php';
 Session::checkSession('admin');
 $role_id = Session::get('role_id');
 if ($role_id == 1) {
-    # code...
 } else {
     header("Location:../index.php");
 }
@@ -44,9 +43,6 @@ $pageCount = $product->getCountPaging();
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="css/style.css">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
-    <script src="https://use.fontawesome.com/2145adbb48.js"></script>
-    <script src="https://kit.fontawesome.com/a42aeb5b72.js" crossorigin="anonymous"></script>
     <title>Danh sách sản phẩm</title>
 </head>
 
@@ -63,6 +59,7 @@ $pageCount = $product->getCountPaging();
             <li><a href="productlist.php" class="active">Quản lý Sản phẩm</a></li>
             <li><a href="categoriesList.php">Quản lý Danh mục</a></li>
             <li><a href="orderlist.php">Quản lý Đơn hàng</a></li>
+            <li><a href="accountlist.php">Quản lý tài khoản</a></li>
         </ul>
     </nav>
     <div class="title">
@@ -142,7 +139,6 @@ $pageCount = $product->getCountPaging();
     </div>
     </div>
     <footer>
-        <p class="copyright">VMHIEU</p>
     </footer>
 </body>
 

@@ -73,9 +73,9 @@ class user
 				$mail->IsHTML(true);
 				$mail->CharSet = 'UTF-8';
 				$mail->AddAddress($email, "recipient-name");
-				$mail->SetFrom("cavaldos1211@gmail.com", "RabbitStore");
-				$mail->Subject = "Xác nhận email tài khoản - RabbitStore";
-				$mail->Body = "<h3>Cảm ơn bạn đã đăng ký tài khoản tại website RabbitStore</h3></br>Đây là mã xác minh tài khoản của bạn: " . $captcha . "";
+				$mail->SetFrom("cavaldos1211@gmail.com", "daustore");
+				$mail->Subject = "Xác nhận email tài khoản - daustore";
+				$mail->Body = "<h3>Cảm ơn bạn đã đăng ký tài khoản tại website daustore</h3></br>Đây là mã xác minh tài khoản của bạn: " . $captcha . "";
 
 				$mail->Send();
 				var_dump($mail->ErrorInfo);

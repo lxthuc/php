@@ -14,7 +14,7 @@ body {
 nav {
   top: 0;
   position: fixed;
-  background: #c00277;
+  background: #42e61d;
   height: 80px;
   width: 100%;
 }
@@ -50,8 +50,7 @@ nav ul li a {
 .active,
 a:hover{
   background-color: white;
-  color: mediumvioletred;
-}
+  color: green}
 
 .checkbtn{
     font-size: 30px;
@@ -94,7 +93,7 @@ footer .copyright{
 
 .list{
     width: 100%;
-    background-color: ghostwhite;
+    background-color: rgb(234, 132, 236);
     padding: 10px;
     border-collapse: collapse;
   }
@@ -106,11 +105,11 @@ footer .copyright{
 
   th{
     background-color:  plum;
-    border: 1px solid mediumvioletred;
+    border: 1px solid rgb(85, 225, 225);
   }
   
   td{
-    border: 1px solid mediumvioletred;
+    border: 1px solid green;
     text-align: center;
   }
 
@@ -136,8 +135,8 @@ footer .copyright{
   
   input[type=submit] {
     width: 100%;
-    background-color: mediumvioletred;
-    color: white;
+    background-color: rgb(60, 199, 21);
+    color: rgb(194, 206, 91);
     padding: 14px 20px;
     margin: 8px 0;
     border: none;
@@ -146,7 +145,7 @@ footer .copyright{
   }
   
   input[type=submit]:hover{
-    background-color: deeppink;
+    background-color: rgb(227, 146, 189);
   }
 
   .success{
@@ -164,17 +163,17 @@ footer .copyright{
   .tablinks{
     width: 150px;
     background-color: white;
-    color: mediumvioletred;
+    color: green;
     padding: 14px 20px;
     margin: 8px 0;
-    border: 2px solid mediumvioletred;
+    border: 2px solid green;
     border-radius: 4px;
     cursor: pointer;
     transition: 0.3s;
   }
 
   .tablinks:hover {
-    background-color: mediumvioletred;
+    background-color: green;
     color: white;
   }
 
@@ -183,6 +182,6 @@ footer .copyright{
 }
 
 .pagination a.active {
-  background-color: dodgerblue;
+  background-color: rgb(128, 220, 62);
   color: white;
 }

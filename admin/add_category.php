@@ -29,6 +29,7 @@ if ($role_id == 1) {
 </head>
 
 <body>
+    <div class = "container">
     <nav>
         <input type="checkbox" id="check">
         <label for="check" class="checkbtn">
@@ -44,7 +45,7 @@ if ($role_id == 1) {
     <div class="title">
         <h1>Thêm mới danh mục</h1>
     </div>
-    <div class="container">
+    <div class="add">
         <p style="color: green;"><?= !empty($result) ? $result : '' ?></p>
         <div class="form-add">
             <form action="add_category.php" method="post">

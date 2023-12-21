@@ -73,8 +73,8 @@ class user
 				$mail->IsHTML(true);
 				$mail->CharSet = 'UTF-8';
 				$mail->AddAddress($email, "recipient-name");
-				$mail->SetFrom("cavaldos1211@gmail.com", "Instrument Store");
-				$mail->Subject = "Xác nhận email tài khoản - Instruments Store";
+				$mail->SetFrom("cavaldos1211@gmail.com", "RabbitStore");
+				$mail->Subject = "Xác nhận email tài khoản - RabbitStore";
 				$mail->Body = "<h3>Cảm ơn bạn đã đăng ký tài khoản tại website RabbitStore</h3></br>Đây là mã xác minh tài khoản của bạn: " . $captcha . "";
 
 				$mail->Send();
@@ -86,6 +86,29 @@ class user
 		}
 	}
 
+	public function create($data)
+	{
+		$email = $data['email'];
+		$fullName = $data['name'];
+		$password = md5($data['password']);
+		$role_id = $data['role_id']; 
+
+		$check_email = "SELECT * FROM users WHERE email='$email' LIMIT 1";
+		$result_check = $this->db->select($check_email);
+
+		if ($result_check) {
+			return 'Email đã tồn tại!';
+		} else {
+			$query = "INSERT INTO users VALUES (NULL,'$email','$fullName', NOW(),'$password','$role_id',1,'',0,'')";
+			$result = $this->db->insert($query);
+
+			if ($result) {
+				return true;
+			} else {
+				return false;
+			}
+		}
+	}
 	public function get()
 	{
 		$userId = Session::get('userId');
@@ -98,6 +121,16 @@ class user
 		return false;
 	}
 
+
+	public function getAllUsers()
+	{
+		$query = "SELECT * FROM users";
+		$result = $this->db->select($query);
+		if ($result) {
+			return mysqli_fetch_all($result, MYSQLI_ASSOC);
+		}
+		return false;
+	}
 	public function getLastUserId()
 	{
 		$query = "SELECT * FROM users ORDER BY id DESC LIMIT 1";

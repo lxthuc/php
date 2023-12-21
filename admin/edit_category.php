@@ -31,6 +31,7 @@ if ($role_id == 1) {
 </head>
 
 <body>
+       <div class = "container">
     <nav>
         <input type="checkbox" id="check">
         <label for="check" class="checkbtn">
@@ -46,7 +47,7 @@ if ($role_id == 1) {
     <div class="title">
         <h1>Chỉnh sửa danh mục</h1>
     </div>
-    <div class="container">
+    <div class="add">
         <?php
         if (isset($result)) {
             echo $result;
@@ -64,9 +65,6 @@ if ($role_id == 1) {
     </div>
     </div>
     
-    <footer>
-        <p class="copyright">STORENOW @ 2021</p>
-    </footer>
 </body>
 
 </html>

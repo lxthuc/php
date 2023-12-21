@@ -31,6 +31,7 @@ $order_result = $order->getById($result[0]['orderId']);
 </head>
 
 <body>
+       <div class = "container">
     <nav>
         <input type="checkbox" id="check">
         <label for="check" class="checkbtn">
@@ -46,7 +47,7 @@ $order_result = $order->getById($result[0]['orderId']);
     <div class="title">
         <h1>Chi tiết đơn đặt hàng <?= $order_result['id'] ?></h1>
     </div>
-    <div class="container">
+    <div class="add">
         <?php
         if ($result) { ?>
             <table class="list">

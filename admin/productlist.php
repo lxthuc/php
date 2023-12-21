@@ -47,6 +47,7 @@ $pageCount = $product->getCountPaging();
 </head>
 
 <body>
+   <div class = "container">
     <nav>
         <input type="checkbox" id="check">
         <label for="check" class="checkbtn">
@@ -68,7 +69,7 @@ $pageCount = $product->getCountPaging();
     <div class="addNew">
         <a href="add_product.php">Thêm mới</a>
     </div>
-    <div class="container">
+    <div class="add">
         <?php $count = 1;
         if ($list) { ?>
             <table class="list">

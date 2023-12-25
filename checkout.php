@@ -21,14 +21,17 @@ $userInfo = $user->get();
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="public/css/style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+    <script src="https://use.fontawesome.com/2145adbb48.js"></script>
+    <script src="https://kit.fontawesome.com/a42aeb5b72.js" crossorigin="anonymous"></script>
     <title>Checkout</title>
 </head>
 
 <body>
     <nav>
-        <a class="logo" href="index.php">
-            <img src="images/logo.png" alt="">
-        </a>
+    <a class="logo" href="index.php">
+                <img src="public/images/logo.png" alt="">
+            </a>
         <ul>
             <li><a href="index.php">Trang chủ</a></li>
             <li><a href="productList.php">Sản phẩm</a></li>

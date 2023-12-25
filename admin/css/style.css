@@ -180,6 +180,9 @@ td {
 }
 
 input[type=text],
+input[type=email],
+input[type=password],
+input[type=date],
 input[type=file],
 input[type=number],
 textarea,

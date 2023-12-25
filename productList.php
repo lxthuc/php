@@ -33,7 +33,7 @@ $categoriesList = $categories->getAll();
     <div class="container">
         <nav>
             <a class="logo" href="index.php">
-                <img src="public/images/logo.png" alt="">
+                <img src="public/images/logo2.png" alt="">
             </a>
             <ul>
                 <li><a href="index.php">Trang chủ</a></li>

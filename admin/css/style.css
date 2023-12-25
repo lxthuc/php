@@ -14,7 +14,7 @@ body {
 nav {
   top: 0;
   position: fixed;
-  background: #42e61d;
+  background: #401058;
   height: 80px;
   width: 100%;
 }
@@ -55,7 +55,7 @@ nav ul li a {
 .active,
 a:hover {
   background-color: white;
-  color: green
+  color: rgb(101, 28, 149)
 }
 
 .checkbtn {
@@ -116,8 +116,8 @@ a:hover {
 
 .btn-success {
   color: #fff;
-  background-color: #5cb85c;
-  border-color: #5cb85c;
+  background-color: #330846;
+  border-color: #982dc3;
   text-align: center;
   margin: 10px;
 }
@@ -198,8 +198,8 @@ select {
 
 input[type=submit] {
   width: 100%;
-  background-color: rgb(60, 199, 21);
-  color: rgb(194, 206, 91);
+  background-color: rgb(69, 26, 88);
+  color: rgb(45, 9, 60);
   padding: 14px 20px;
   margin: 8px 0;
   border: none;
@@ -226,17 +226,17 @@ input[type=submit]:hover {
 .tablinks {
   width: 150px;
   background-color: white;
-  color: green;
+  color: rgb(58, 12, 72);
   padding: 14px 20px;
   margin: 8px 0;
-  border: 2px solid green;
+  border: 2px solid rgb(46, 15, 58);
   border-radius: 4px;
   cursor: pointer;
   transition: 0.3s;
 }
 
 .tablinks:hover {
-  background-color: green;
+  background-color: rgb(113, 28, 134);
   color: white;
 }
 
@@ -245,6 +245,6 @@ input[type=submit]:hover {
 }
 
 .pagination a.active {
-  background-color: rgb(128, 220, 62);
+  background-color: rgb(82, 23, 108);
   color: white;
 }

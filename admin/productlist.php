@@ -27,8 +27,8 @@ $pageCount = $product->getCountPaging();
 <body>
     <div class="container">
         <nav>
-            <a class="logo" href="index.php">
-                <img style="margin-left:50px;width:80px; float:left"e src="img/admin.png" ></img>
+             <a href="index.php">
+                <label class="logo">ADMIN</label>
             </a>
             <ul>
                 <li><a href="productList.php" class="active">Quản lý Sản phẩm</a></li>

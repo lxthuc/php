@@ -148,7 +148,7 @@ class product
         if (!empty($file_name)) {
             move_uploaded_file($file_temp, $uploaded_image);
             $query = "UPDATE products SET 
-					name ='$name',
+					name ='$name'
 					cateId = '$cateId',
 					originalPrice = '$originalPrice',
 					promotionPrice = '$promotionPrice',
@@ -175,7 +175,7 @@ class product
             return $alert;
         }
     }
-   
+
 
     public function getProductbyIdAdmin($id)
     {
@@ -195,36 +195,57 @@ class product
         return false;
     }
 
-    public function block($id)
+    public function updateQty($id, $newQty)
     {
-        $query = "UPDATE products SET status = 0 where id = '$id' ";
-        $result = $this->db->delete($query);
-        if ($result) {
-            return true;
-        } else {
+        // Get the current quantity from the database
+        $currentQty = $this->getQtyById($id);
+
+        // Check if the new quantity is greater than the current quantity
+        if ($newQty > $currentQty) {
+            // Handle the case where the new quantity is greater
+            // You can set an error message or take appropriate action
             return false;
         }
-    }
 
-    public function active($id)
-    {
-        $query = "UPDATE products SET status = 1 where id = '$id' ";
-        $result = $this->db->delete($query);
-        if ($result) {
-            return true;
-        } else {
-            return false;
-        }
-    }
-
-    public function updateQty($id, $qty)
-    {
-        $query = "UPDATE products SET qty = qty - $qty, soldCount = soldCount + $qty WHERE id = $id";
+        // Update the quantity in the database
+        $query = "UPDATE products SET qty = $currentQty - $newQty WHERE id = $id";
         $mysqli_result = $this->db->update($query);
+
         if ($mysqli_result) {
             return true;
         }
+
         return false;
+    }
+
+    public function getQtyById($id)
+    {
+        $query = "SELECT qty FROM products WHERE id = $id";
+        $result = $this->db->select($query);
+
+        if ($result) {
+            $row = mysqli_fetch_assoc($result);
+            return $row['qty'];
+        }
+
+        return 0; // Default to 0 if unable to fetch the quantity
+
+    }
+    public function getProductbyIdForEdit($id)
+    {
+        $query = "SELECT * FROM products WHERE id = '$id'";
+        $result = $this->db->select($query);
+        return $result;
+    }
+    public function delete($id)
+    {
+        $query = "DELETE FROM products WHERE id = '$id'";
+        $result = $this->db->delete($query);
+        if ($result) {
+            return true;
+        } else {
+            return false;
+        }
     }
 }
 ?>

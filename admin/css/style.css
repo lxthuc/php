@@ -18,10 +18,12 @@ nav {
   height: 80px;
   width: 100%;
 }
-.container
-{
-  margin-top: 81px;;
+
+.container {
+  margin-top: 81px;
+  ;
 }
+
 label.logo {
   color: white;
   font-size: 35px;
@@ -51,136 +53,191 @@ nav ul li a {
 }
 
 .active,
-a:hover{
+a:hover {
   background-color: white;
-  color: green}
-
-.checkbtn{
-    font-size: 30px;
-    color: white;
-    float: right;
-    line-height: 80px;
-    margin-right: 40px;
-    cursor: pointer;
-    display: none;
+  color: green
 }
 
-#check{
-    display: none;
+.checkbtn {
+  font-size: 30px;
+  color: white;
+  float: right;
+  line-height: 80px;
+  margin-right: 40px;
+  cursor: pointer;
+  display: none;
 }
 
-.add{
+#check {
+  display: none;
+}
+
+.btn {
+  margin-top: 5px;
+  margin-bottom: 5px;
+  display: inline-block;
+  padding: 0.375rem 1rem;
+  font-size: 1rem;
+  font-weight: normal;
+  line-height: 1.5;
+  text-align: center;
+  white-space: nowrap;
+  vertical-align: middle;
+  -ms-touch-action: manipulation;
+  touch-action: manipulation;
+  cursor: pointer;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+  border: 0.0625rem solid transparent;
+  border-radius: 0.25rem;
+}
+
+.btn-info {
+  color: #fff;
+  background-color: #5bc0de;
+  border-color: #5bc0de;
+  margin-top: 5px;
+  margin-bottom: 5px;
+}
+
+.btn-primary {
+  color: #fff;
+  background-color: #0275d8;
+  border-color: #0275d8;
+}
+
+.btn-danger {
+  color: #fff;
+  background-color: #d9534f;
+  border-color: #d9534f;
+}
+
+.btn-success {
+  color: #fff;
+  background-color: #5cb85c;
+  border-color: #5cb85c;
+  text-align: center;
+  margin: 10px;
+}
+
+.add {
   margin-top: 30px;
   height: auto;
 }
 
-.addNew{
+.addNew {
   margin-top: 0px;
 }
 
-.title{
-    background-color: white;
+.title {
+  background-color: white;
 }
 
 footer {
   padding: 30px 0;
-  background-color:white;
+  background-color: white;
 }
 
-footer .copyright{
+footer .copyright {
   margin-top: 15px;
   text-align: center;
   font-size: 12px;
   color: gray;
 }
 
-.list{
-    width: 100%;
-    background-color: rgb(255, 255, 255);
-    padding: 10px;
-    border-collapse: collapse;
-  }
+.list {
+  width: 100%;
+  background-color: rgb(255, 255, 255);
+  padding: 10px;
+  border-collapse: collapse;
+}
 
-  .image-cart{
-    height: 100px;
-    width: 100px;
-  }
+.image-cart {
+  height: 100px;
+  width: 100px;
+}
 
-  th{
-    background-color:  plum;
-    border: 1px solid rgb(85, 225, 225);
-  }
-  
-  td{
-    border: 1px solid rgb(12, 12, 12);
-    text-align: center;
-  }
+th {
+  background-color: plum;
+  border: 1px solid rgb(85, 225, 225);
+}
 
-  .product-list{
-      padding-top: 1000px;
-  }
+td {
+  border: 1px solid rgb(12, 12, 12);
+  text-align: center;
+}
 
-  .form-add{
-    border-radius: 5px;
-    background-color: #f2f2f2;
-    padding: 10px 400px;
-  }
+.product-list {
+  padding-top: 1000px;
+}
 
-  input[type=text], input[type=file], input[type=number], textarea, select {
-    width: 100%;
-    padding: 12px 20px;
-    margin: 8px 0;
-    display: inline-block;
-    border: 1px solid #ccc;
-    border-radius: 4px;
-    box-sizing: border-box;
-  }
-  
-  input[type=submit] {
-    width: 100%;
-    background-color: rgb(60, 199, 21);
-    color: rgb(194, 206, 91);
-    padding: 14px 20px;
-    margin: 8px 0;
-    border: none;
-    border-radius: 4px;
-    cursor: pointer;
-  }
-  
-  input[type=submit]:hover{
-    background-color: rgb(227, 146, 189);
-  }
+.form-add {
+  border-radius: 5px;
+  background-color: #f2f2f2;
+  padding: 10px 400px;
+}
 
-  .success{
-    color: green;
-  }
+input[type=text],
+input[type=file],
+input[type=number],
+textarea,
+select {
+  width: 100%;
+  padding: 12px 20px;
+  margin: 8px 0;
+  display: inline-block;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  box-sizing: border-box;
+}
 
-  .error{
-    color: red;
-  }
+input[type=submit] {
+  width: 100%;
+  background-color: rgb(60, 199, 21);
+  color: rgb(194, 206, 91);
+  padding: 14px 20px;
+  margin: 8px 0;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+}
 
-  .tabcontent{
-    height: 450px;
-  }
+input[type=submit]:hover {
+  background-color: rgb(227, 146, 189);
+}
 
-  .tablinks{
-    width: 150px;
-    background-color: white;
-    color: green;
-    padding: 14px 20px;
-    margin: 8px 0;
-    border: 2px solid green;
-    border-radius: 4px;
-    cursor: pointer;
-    transition: 0.3s;
-  }
+.success {
+  color: green;
+}
 
-  .tablinks:hover {
-    background-color: green;
-    color: white;
-  }
+.error {
+  color: red;
+}
 
-.pagination{
+.tabcontent {
+  height: 450px;
+}
+
+.tablinks {
+  width: 150px;
+  background-color: white;
+  color: green;
+  padding: 14px 20px;
+  margin: 8px 0;
+  border: 2px solid green;
+  border-radius: 4px;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+.tablinks:hover {
+  background-color: green;
+  color: white;
+}
+
+.pagination {
   text-align: center;
 }
 

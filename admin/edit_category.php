@@ -31,40 +31,38 @@ if ($role_id == 1) {
 </head>
 
 <body>
-       <div class = "container">
-    <nav>
-        <input type="checkbox" id="check">
-        <label for="check" class="checkbtn">
-            <i class="fas fa-bars"></i>
-        </label>
-        <label class="logo">ADMIN</label>
-        <ul>
-            <li><a href="productlist.php">Quản lý Sản phẩm</a></li>
-            <li><a href="categoriesList.php" class="active">Quản lý danh mục</a></li>
-            <li><a href="orderlist.php">Quản lý Đơn hàng</a></li>
-        </ul>
-    </nav>
-    <div class="title">
-        <h1>Chỉnh sửa danh mục</h1>
-    </div>
-    <div class="add">
-        <?php
-        if (isset($result)) {
-            echo $result;
-        }
-        ?>
-        <div class="form-add">
-            <form action="edit_category.php?id=<?= $categoryUpdate['id'] ?>" method="post">
-                <input type="text" hidden name="id" style="display: none;" value="<?= (isset($_GET['id']) ? $_GET['id'] : $categoryUpdate['id']) ?>">
-                <label for="name">Tên danh mục</label>
-                <input type="text" id="name" name="name" placeholder="Tên danh mục.." value="<?= $categoryUpdate['name'] ?>">
+    <div class="container">
+        <nav>
+            <a class="logo" href="index.php">
+                <img style="margin-left:50px;width:80px; float:left" e src="img/admin.png"></img>
+            </a>
+            <ul>
+                <li><a href="productlist.php">Quản lý Sản phẩm</a></li>
+                <li><a href="categoriesList.php" class="active">Quản lý danh mục</a></li>
+                <li><a href="orderlist.php">Quản lý Đơn hàng</a></li>
+                <li><a href="userList.php">Quản lý tài khoản</a></li>
+            </ul>
+        </nav>
+        <div class="title">
+            <h1>Chỉnh sửa danh mục</h1>
+        </div>
+        <div class="container">
+            <?php
+            if (isset($result)) {
+                echo $result;
+            }
+            ?>
+            <div class="form-add">
+                <form action="edit_category.php?id=<?= $categoryUpdate['id'] ?>" method="post">
+                    <input type="text" hidden name="id" style="display: none;" value="<?= (isset($_GET['id']) ? $_GET['id'] : $categoryUpdate['id']) ?>">
+                    <label for="name">Tên danh mục</label>
+                    <input type="text" id="name" name="name" placeholder="Tên danh mục.." value="<?= $categoryUpdate['name'] ?>">
 
-                <input type="submit" value="Lưu" name="submit">
-            </form>
+                    <input type="submit" value="Lưu" name="submit">
+                </form>
+            </div>
         </div>
     </div>
-    </div>
-    
 </body>
 
 </html>

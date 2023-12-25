@@ -32,72 +32,67 @@ $categoriesList = $category->getAll();
 </head>
 
 <body>
-       <div class = "container">
-    <nav>
-        <input type="checkbox" id="check">
-        <label for="check" class="checkbtn">
-            <i class="fas fa-bars"></i>
-        </label>
-        <label class="logo">ADMIN</label>
-        <ul>
-            <li><a href="productlist.php" class="active">Quản lý Sản phẩm</a></li>
-            <li><a href="categoriesList.php">Quản lý Danh mục</a></li>
-            <li><a href="orderlist.php">Quản lý Đơn hàng</a></li>
-        </ul>
-    </nav>
-    <div class="title">
-        <h1>Chỉnh sửa sản phẩm</h1>
-    </div>
-    <div class="add">
-        <?php
-        if (isset($result)) {
-            echo $result;
-        }
-        ?>
-        <div class="form-add">
-            <form action="edit_product.php?id=<?= $productUpdate['id'] ?>" method="post" enctype="multipart/form-data">
-                <input type="text" hidden name="id" style="display: none;" value="<?= $productUpdate['id'] ?>">
-                <label for="name">Tên sản phẩm</label>
-                <input type="text" id="name" name="name" placeholder="Tên sản phẩm.." value="<?= $productUpdate['name'] ?>">
+    <div class="container">
+        <nav>
+            <a class="logo" href="index.php">
+                <img style="margin-left:50px;width:80px; float:left" e src="img/admin.png"></img>
+            </a>
+            <ul>
+                <li><a href="productlist.php" class="active">Quản lý Sản phẩm</a></li>
+                <li><a href="categoriesList.php">Quản lý Danh mục</a></li>
+                <li><a href="orderlist.php">Quản lý Đơn hàng</a></li>
+                <li><a href="userList.php">Quản lý tài khoản</a></li>
+            </ul>
+        </nav>
+        <div class="title">
+            <h1>Chỉnh sửa sản phẩm</h1>
+        </div>
+        <div class="add">
+            <?php
+            if (isset($result)) {
+                echo $result;
+            }
+            ?>
+            <div class="form-add">
+                <form action="edit_product.php?id=<?= $productUpdate['id'] ?>" method="post" enctype="multipart/form-data">
+                    <input type="text" hidden name="id" style="display: none;" value="<?= $productUpdate['id'] ?>">
+                    <label for="name">Tên sản phẩm</label>
+                    <input type="text" id="name" name="name" placeholder="Tên sản phẩm.." value="<?= $productUpdate['name'] ?>">
 
-                <label for="originalPrice">Giá gốc</label>
-                <input type="number" id="originalPrice" name="originalPrice" value="<?= $productUpdate['originalPrice'] ?>">
+                    <label for="originalPrice">Giá gốc</label>
+                    <input type="number" id="originalPrice" name="originalPrice" value="<?= $productUpdate['originalPrice'] ?>">
 
-                <label for="promotionPrice">Giá khuyến mãi</label>
-                <input type="number" id="promotionPrice" name="promotionPrice" value="<?= $productUpdate['promotionPrice'] ?>">
+                    <label for="promotionPrice">Giá khuyến mãi</label>
+                    <input type="number" id="promotionPrice" name="promotionPrice" value="<?= $productUpdate['promotionPrice'] ?>">
 
-                <label for="image">Hình ảnh</label>
-                <img src="uploads/<?= $productUpdate['image'] ?>" style="height: 200px;" id="image"> <br>
+                    <label for="image">Hình ảnh</label>
+                    <img src="uploads/<?= $productUpdate['image'] ?>" style="height: 200px;" id="image"> <br>
 
-                <label for="imageNew">Chọn hình ảnh mới</label>
-                <input type="file" id="imageNew" name="image">
+                    <label for="imageNew">Chọn hình ảnh mới</label>
+                    <input type="file" id="imageNew" name="image">
 
-                <label for="cateId">Loại sản phẩm</label>
-                <select id="cateId" name="cateId">
-                    <?php foreach ($categoriesList as $key => $value) {
-                        if ($value['id'] == $productUpdate['cateId']) { ?>
-                            <option selected value="<?= $value['id'] ?>"><?= $value['name'] ?></option>
-                        <?php  } else { ?>
-                            <option value="<?= $value['id'] ?>"><?= $value['name'] ?></option>
-                        <?php   } ?>
-                    <?php } ?>
-                </select>
+                    <label for="cateId">Loại sản phẩm</label>
+                    <select id="cateId" name="cateId">
+                        <?php foreach ($categoriesList as $key => $value) {
+                            if ($value['id'] == $productUpdate['cateId']) { ?>
+                                <option selected value="<?= $value['id'] ?>"><?= $value['name'] ?></option>
+                            <?php  } else { ?>
+                                <option value="<?= $value['id'] ?>"><?= $value['name'] ?></option>
+                            <?php   } ?>
+                        <?php } ?>
+                    </select>
 
-                <label for="qty">Số lượng</label>
-                <input type="number" id="qty" name="qty" value="<?= $productUpdate['qty'] ?>">
+                    <label for="qty">Số lượng</label>
+                    <input type="number" id="qty" name="qty" value="<?= $productUpdate['qty'] ?>">
 
-                <label for="des">Mô tả</label>
-                <textarea name="des" id="des" cols="30" rows="10"><?= $productUpdate['des'] ?></textarea>
+                    <label for="des">Mô tả</label>
+                    <textarea name="des" id="des" cols="30" rows="10"><?= $productUpdate['des'] ?></textarea>
 
-                <input type="submit" value="Lưu" name="submit">
-            </form>
+                    <input type="submit" value="Lưu" name="submit">
+                </form>
+            </div>
         </div>
     </div>
-    </div>
-    
-    <footer>
-        <p class="copyright">STORENOW @ 2021</p>
-    </footer>
 </body>
 
 </html>

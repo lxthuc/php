@@ -14,6 +14,13 @@ $processingOrderList = $order->getProcessingOrder();
 $processedOrderList = $order->getProcessedOrder();
 $deliveringOrderList = $order->getDeliveringOrder();
 $completeOrderList = $order->getCompleteOrder();
+$totalRevenue = 0;
+foreach ($completeOrderList as $order) {
+    // Check if 'totalPrice' key exists before accessing it
+    if (isset($order['totalPrice'])) {
+        $totalRevenue += $order['totalPrice'];
+    }
+}
 ?>
 
 <!DOCTYPE html>
@@ -71,7 +78,7 @@ $completeOrderList = $order->getCompleteOrder();
                         foreach ($processingOrderList as $key => $value) { ?>
                             <tr>
                                 <td><?= $count++ ?></td>
-                                <td><?= $value['userId']?></td>
+                                <td><?= $value['userId'] ?></td>
                                 <td><?= $value['id'] ?></td>
                                 <td><?= $value['createdDate'] ?></td>
                                 <td><?= ($value['status'] != "Processing") ? $value['receivedDate'] : "Dự kiến 3 ngày sau khi đơn hàng đã được xử lý" ?> <?= ($value['status'] != "Complete" && $value['status'] != "Processing") ? "(Dự kiến)" : "" ?> </td>
@@ -187,6 +194,7 @@ $completeOrderList = $order->getCompleteOrder();
                     <h3>Chưa có đơn hàng nào đã hoàn thành</h3>
                 <?php }
                 ?>
+                <div>Total Revenue: <?= number_format($totalRevenue, 0, '', ',') ?> VND</div>
             </div>
         </div>
     </div>

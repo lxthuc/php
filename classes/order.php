@@ -101,7 +101,10 @@ class order
 
     public function getProcessingOrder()
     {
-        $query = "SELECT * FROM orders WHERE status = 'Processing'";
+        $query = "SELECT o.*, u.id as userId, u.address
+              FROM orders o
+              JOIN users u ON o.userId = u.id
+              WHERE o.status = 'Processing'";
         $mysqli_result = $this->db->select($query);
         if ($mysqli_result) {
             $result = mysqli_fetch_all($this->db->select($query), MYSQLI_ASSOC);
@@ -112,7 +115,10 @@ class order
 
     public function getProcessedOrder()
     {
-        $query = "SELECT * FROM orders WHERE status = 'Processed'";
+        $query = "SELECT o.*, u.id as userId, u.address
+              FROM orders o
+              JOIN users u ON o.userId = u.id
+              WHERE o.status = 'Processed'";
         $mysqli_result = $this->db->select($query);
         if ($mysqli_result) {
             $result = mysqli_fetch_all($this->db->select($query), MYSQLI_ASSOC);
@@ -123,7 +129,10 @@ class order
 
     public function getDeliveringOrder()
     {
-        $query = "SELECT * FROM orders WHERE status = 'Delivering'";
+        $query = "SELECT o.*, u.id as userId, u.address
+              FROM orders o
+              JOIN users u ON o.userId = u.id
+              WHERE o.status = 'Delivering'";
         $mysqli_result = $this->db->select($query);
         if ($mysqli_result) {
             $result = mysqli_fetch_all($this->db->select($query), MYSQLI_ASSOC);
@@ -131,10 +140,12 @@ class order
         }
         return false;
     }
-
     public function getCompleteOrder()
     {
-        $query = "SELECT * FROM orders WHERE status = 'Complete'";
+        $query = "SELECT o.*, u.id as userId, u.address
+              FROM orders o
+              JOIN users u ON o.userId = u.id
+              WHERE o.status = 'Complete'";
         $mysqli_result = $this->db->select($query);
         if ($mysqli_result) {
             $result = mysqli_fetch_all($this->db->select($query), MYSQLI_ASSOC);

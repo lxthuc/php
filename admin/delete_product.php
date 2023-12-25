@@ -13,10 +13,10 @@ if ($role_id == 1) {
 
         if ($result) {
             // Xóa thành công, chuyển hướng về trang danh sách sản phẩm
-            header("Location: productlist.php");
+            header("Location: productlist.php?succes=$product_id");
         } else {
             // Xóa không thành công, hiển thị thông báo hoặc xử lý tùy ý
-            echo "Xóa không thành công";
+            header("Location: productlist.php?error=" . urlencode($result));
         }
     }
 } else {

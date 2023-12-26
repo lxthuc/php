@@ -33,7 +33,7 @@ $categoriesList = $categories->getAll();
     <div class="container">
         <nav>
             <a class="logo" href="index.php">
-                <img src="public/images/logo2.png" alt="">
+                <img style="height:57px;" src="public/images/logo2.png" alt="">
             </a>
             <ul>
                 <li><a href="index.php">Trang chủ</a></li>
@@ -78,7 +78,7 @@ $categoriesList = $categories->getAll();
             if ($list) {
                 foreach ($list as $key => $value) {
                     // Check if the quantity is greater than zero
-                    $isInStock = $value['quantity'] > 0;
+                    $isInStock = $value['qty'] > 0;
             ?>
                     <div class="card">
                         <div class="imgBx">

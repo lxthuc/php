@@ -60,7 +60,7 @@ if (!$result) {
     </div>
     <div class="container-single">
         <div class="image-product">
-            <img src="admin/uploads/<?= $result['image'] ?>" alt="">
+            <img style="height: 57px;" src="admin/uploads/<?= $result['image'] ?>" alt="">
         </div>
         <div class="info">
             <div class="name">

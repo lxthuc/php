@@ -2,12 +2,7 @@
 $filepath = realpath(dirname(__FILE__));
 include_once($filepath . '/../lib/database.php');
 include_once($filepath . '/../lib/session.php');
-?>
 
-<?php
-/**
- * 
- */
 class product
 {
     private $db;
@@ -197,12 +192,17 @@ class product
 
     public function updateQty($id, $newQty)
     {
+        // Get the current quantity from the database
         $currentQty = $this->getQtyById($id);
 
+        // Check if the new quantity is greater than the current quantity
         if ($newQty > $currentQty) {
+            // Handle the case where the new quantity is greater
+            // You can set an error message or take appropriate action
             return false;
         }
 
+        // Update the quantity in the database
         $query = "UPDATE products SET qty = $currentQty - $newQty WHERE id = $id";
         $mysqli_result = $this->db->update($query);
 
@@ -223,8 +223,7 @@ class product
             return $row['qty'];
         }
 
-        return 0; 
-
+        return 0;
     }
     public function getProductbyIdForEdit($id)
     {
@@ -243,4 +242,3 @@ class product
         }
     }
 }
-?>

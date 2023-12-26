@@ -59,7 +59,7 @@ a:hover {
   color: white;
 }
 
-.container{
+.add{
   display: flex;
   position: relative;
   width: 90%;
@@ -71,14 +71,14 @@ a:hover {
   margin: auto;
 }
 
-.container .card{
+.add .card{
   width: 100%;
   background: #fff;
   border-radius: 10px;
   box-shadow: 2px 2px 2px gray;
 }
 
-.container .card .imgBx{
+.add .card .imgBx{
   position: relative;
   width: 100%;
   height: 300px;
@@ -86,7 +86,7 @@ a:hover {
   overflow: hidden;
 }
 
-.container .card .imgBx img{
+.add .card .imgBx img{
   position: absolute;
   top: 0;
   left: 0;
@@ -95,12 +95,12 @@ a:hover {
   transition: 0.5s;
 }
 
-.container .card .imgBx:hover img{
+.add .card .imgBx:hover img{
   transition: 0.5s;
   transform: scale(1.1);
 }
 
-.container .card .content{
+.add .card .content{
   text-align: center;
 }
 
@@ -108,7 +108,7 @@ a:hover {
   color: #6b00a8;
 }
 
-.container .card .content .price{
+.add .card .content .price{
   text-align: center;
   color: darkred;
   margin-right: 10px;
@@ -116,7 +116,7 @@ a:hover {
   font-size: 18px;
 }
 
-.container .card .content .original-price{
+.add .card .content .original-price{
   text-align: center;
   margin-right: 10px;
   text-align: right;
@@ -231,7 +231,7 @@ footer .copyright{
   color: gray;
 }
 
-.container-single{
+.add-single{
   display: flex;
   margin: 30px 100px;
 }
